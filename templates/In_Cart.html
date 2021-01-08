@@ -1,0 +1,39 @@
+{% extends 'common.html' %}
+{% block common %}
+    {% include 'Admin_menu.html' %}
+      <style>
+         .product__info_title
+              {
+                color: #ff1f38;
+                font-size: 30px;
+                font-family: "Agency FB";
+                padding: 10px;
+                border-color: #e126ff;
+                border-width: 4px;
+              }
+              .table
+              {
+                  border-radius: 8px;
+                  border-width: 9px;
+                  border-color: #ff2024;
+
+              }
+      </style><br><br>
+       <table align="center" border="2" class="table">
+       <tr>
+           <th  colspan="2" style="background-color: yellow;color:blue;font-size:50px;font-family: 'Agency FB';border-color: lime;border-width: 5px">View_All_Cookies</th>
+       </tr>
+       <tr><th class="product__info_title">No</th>
+           <th class="product__info_title">Product_Name</th>
+       </tr>
+
+       {% for x,y in Data.items  %}
+           {% if x != "csrftoken" %}
+           <tr>
+               <th style="padding: 10px;color: purple">{{ x }}</th>
+               <th style="padding: 10px;color: purple">{{ y }}</th>
+           </tr>
+           {% endif %}
+       {% endfor %}
+       </table><br><br>
+{% endblock %}

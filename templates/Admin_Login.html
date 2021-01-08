@@ -1,0 +1,63 @@
+{% extends 'common.html' %}
+{% block common %}
+      {% load static %}
+       {% include 'main_menu.html' %}
+         <style>
+            .AL
+            {
+
+                color: #010207;
+                font-family:"Agency FB";
+                font-size: 50px;
+                padding: 5px;
+            }
+            .input
+            {
+                padding: 10px;
+            }
+            .messages
+            {
+                color: #ff1616;
+                font-size: 50px;
+                font-family: "Agency FB";
+            }
+         </style>
+         <table align="center">
+            <tr><th rowspan="4"><img src="{% static 'images/log_in.png' %}" width="350" height="450"></th></tr>
+            <tr>
+                <th>
+                    <form action="{% url 'Admin_Login_checked' %}" method="post">
+                        {% csrf_token %}
+                        <br><br>
+                        <table align="center" border="0" bgcolor="#ff00ff">
+                            <tr>
+                                <th class="AL">Admin_login</th>
+                            </tr>
+                            <tr>
+                                <th class="input">
+                                    <input type="text" placeholder="USER_NAME" name="n1" required>
+                                </th>
+                            </tr>
+                            <tr>
+                                <th class="input">
+                                    <input type="password" placeholder="PASSWORD" name="n2" required>
+                                </th>
+                            </tr>
+                            <tr>
+                                <th class="input"><button type="submit">LOGIN</button></th>
+                            </tr>
+                            {% if messages %}
+                                <tr>
+                                    <th class="messages">
+                                        {% for x in messages %}
+                                            {{ x }}
+                                        {% endfor %}
+                                    </th>
+                                </tr>
+                            {% endif %}
+                        </table><br><br>
+                    </form>
+                </th>
+            </tr>
+         </table>
+{% endblock %}

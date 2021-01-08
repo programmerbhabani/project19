@@ -1,0 +1,43 @@
+{% load static %}
+<html>
+  <head>
+       <link rel="stylesheet" href="{% static 'css/sample.css' %}">
+  </head>
+  <style>
+      .new
+      {
+          color: #0813dc;
+          font-size: 120px;
+          font-family: Algerian;
+          text-align: center;
+          padding: 5px;
+          text-shadow: 5px 5px 5px #ff182a;
+          text-underline: #ff1616;
+      }
+  </style>
+
+  <body><br>
+     <table align="center" border="0">
+         <tr>
+             <th class="img"><img src="{% static 'images/shop.png' %}" width="200" height="150"></th>
+             <th class="new" style="border-width: 10px;border: #ff1616">Bhabani Mart</th>
+             <th class="img"><img src="{% static 'images/add.png' %}" width="200" height="150"></th>
+         </tr>
+         <tr>
+             <th colspan="3">
+
+             </th>
+         </tr>
+         <tr>
+             <th colspan="3">
+                 {% block common %}
+
+                 {% endblock %}
+             </th>
+         </tr>
+         <tr>
+             <th  class="copy" colspan="3"></th>
+         </tr>
+     </table>
+  </body>
+</html>

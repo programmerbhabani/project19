@@ -1,0 +1,23 @@
+{% extends 'common.html' %}
+
+{% block common %}
+      {% include 'Admin_menu.html' %}
+       {% load static %}
+        <br><br>
+        <style>
+          .a1
+          {
+              font-size: 20px;
+              color: #a310a5;
+          }
+        </style>
+        <table align="center" border="0">
+           <tr>
+               <th ROWSPAN="5"><img src="{% static 'images/E1.png'%}" width="400" height="300"></th>
+           </tr>
+           <tr><th class="a1">NAME:-BHABANI SHANKAR SWAIN</th></tr>
+            <tr><th class="a1">CONTACT_NO:-9937104520</th></tr>
+            <tr><th class="a1">Email_Id:-bhbanaishankar@gmail.com</th></tr>
+            <tr><th class="a1">ADDRESS:-B.B.S.R</th></tr>
+        </table>
+{% endblock %}

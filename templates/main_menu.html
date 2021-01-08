@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <style>
+            .Main_menu
+            {
+                background-color: #200eff;
+                color: #ff1616;
+                padding: 10px;
+                font-size: 30px;
+                font-family: "Agency FB";
+                width: 350px;
+
+            }
+        </style>
+    </head>
+      <body>
+         <table>
+             <tr>
+                 <th class="Main_menu"><a href="{% url 'main' %}">Home</a></th>
+                 <th class="Main_menu"><a href="{% url 'Admin_Login' %}">Admin_Login</a></th>
+                 <th class="Main_menu">User_Register</th>
+                 <th class="Main_menu">User_Login</th>
+             </tr>
+         </table>
+      </body>
+</html>

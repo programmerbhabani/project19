@@ -1,0 +1,21 @@
+.new
+{
+    color: #0813dc;
+    font-size: 120px;
+    font-family: Algerian;
+
+    text-align: center;
+    padding: 5px;
+    text-shadow: 5px 5px 5px #ff182a;
+}
+.img
+{
+    padding: 10px;
+}
+.copy
+{
+    background-color: #1c27ff;
+    width: 70px;
+    height: 40px;
+}
+.menu
